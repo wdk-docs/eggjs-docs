@@ -4,7 +4,7 @@ draft: false
 weight: 13
 ---
 
-You can cancel a request using a _cancel token_.
+你可以使用一个 _cancel token_ 取消请求。
 
 > The axios cancel token API is based on the withdrawn [cancelable promises proposal](https://github.com/tc39/proposal-cancelable-promises).
 

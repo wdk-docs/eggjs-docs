@@ -1,12 +1,13 @@
 ---
 title: "使用 application/x-www-form-urlencoded 格式"
+linkTitle: "x-www-form"
 draft: false
 weight: 14
 ---
 
 By default, axios serializes JavaScript objects to `JSON`. To send data in the `application/x-www-form-urlencoded` format instead, you can use one of the following options.
 
-### Browser
+## Browser
 
 In a browser, you can use the [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) API as follows:
 
@@ -40,9 +41,9 @@ const options = {
 axios(options);
 ```
 
-### Node.js
+## Node.js
 
-#### Query string
+### Query string
 
 In node.js, you can use the [`querystring`](https://nodejs.org/api/querystring.html) module as follows:
 
@@ -61,11 +62,11 @@ axios.post("http://something.com/", params.toString());
 
 You can also use the [`qs`](https://github.com/ljharb/qs) library.
 
-###### NOTE
+##### NOTE
 
 The `qs` library is preferable if you need to stringify nested objects, as the `querystring` method has known issues with that use case (https://github.com/nodejs/node-v0.x-archive/issues/1665).
 
-#### Form data
+### Form data
 
 In node.js, you can use the [`form-data`](https://github.com/form-data/form-data) library as follows:
 

@@ -4,9 +4,9 @@ draft: false
 weight: 9
 ---
 
-You can specify config defaults that will be applied to every request.
+您可以指定将应用于每个请求的配置默认值。
 
-### Global axios defaults
+## 全局 axios 配置
 
 ```js
 axios.defaults.baseURL = "https://api.example.com";
@@ -19,7 +19,7 @@ axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded";
 ```
 
-### Custom instance defaults
+## 自定义示例默认值
 
 ```js
 // Set config defaults when creating the instance
@@ -31,7 +31,7 @@ const instance = axios.create({
 instance.defaults.headers.common["Authorization"] = AUTH_TOKEN;
 ```
 
-### Config order of precedence
+## 配置优先顺序
 
 Config will be merged with an order of precedence. The order is library defaults found in [lib/defaults.js](https://github.com/axios/axios/blob/master/lib/defaults.js#L28), then `defaults` property of the instance, and finally `config` argument for the request. The latter will take precedence over the former. Here's an example.
 
